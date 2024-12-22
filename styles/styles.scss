@@ -1,0 +1,16 @@
+@import 'header',
+'modal',
+'main',
+'footer',
+'normalize',
+'fonts';
+
+@import 'main/about-us',
+'main/advantages',
+'main/catalog',
+'main/offers';
+
+@import 'catalog/catalog',
+'catalog/menu';
+
+@import 'cart/cart'

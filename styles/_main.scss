@@ -1,0 +1,272 @@
+.card {
+	&__content {
+		padding: 25px 16px 20px 16px;
+		height: 161px;
+		line-height: 1.25;
+	}
+
+	&__image-wrapper {
+		position: relative;
+		cursor: pointer;
+
+		&:hover {
+			.card__image {
+				transition-duration: 0.5s;
+				filter: brightness(50%);
+			}
+
+			.card__add {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__add {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		translate: -50% -50%;
+		padding: 0;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		color: #ffffff;
+		width: 140px;
+		height: 44px;
+		border: 1px solid #ffffff;
+		padding-left: 30px;
+		opacity: 0;
+		transition-duration: 0.1s;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 10px;
+			display: block;
+			background-image: url(.././images/icons/cart.svg);
+			background-position: center center;
+			background-repeat: no-repeat;
+			width: 26px;
+			height: 24px;
+		}
+	}
+
+	&__title {
+		font-size: 13px;
+		margin-bottom: 13px;
+	}
+
+	&__description {
+		font-size: 14px;
+		font-weight: 300;
+		color: #5d5d5d;
+		margin-bottom: 18px;
+	}
+
+	&__price {
+		font-size: 16px;
+	}
+}
+
+.catalog {
+	height: 148px;
+	background-color: #F8F3F4;
+
+	&-header {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&__wrapper {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			@media (width <=600px) {
+				flex-direction: column;
+				gap: 32px;
+			}
+		}
+
+		&__left-item {
+			font-weight: 400;
+			font-size: 24px;
+			color: #f16d7f;
+		}
+
+		&__right-item {
+			font-weight: 300;
+			font-size: 14px;
+			color: #636363;
+
+			& a {
+				color: inherit;
+				text-decoration: none;
+			}
+
+			& span {
+				font-weight: 400;
+				color: #f16d7f;
+			}
+		}
+	}
+}
+
+.feedback {
+	background-image: url('./../images/form-bg.webp');
+	background-size: cover;
+
+	@media (width <=1600px) {
+		background-image: url('./../images/form-bg-1600.webp');
+	}
+
+	@media (width <=1280px) {
+		background-position: -200px;
+	}
+
+	@media (width <=768px) {
+		background-position: -500px;
+	}
+
+	&__body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 448px;
+		gap: 300px;
+
+		@media (width < 1280px) {
+			flex-direction: column;
+			height: 614px;
+			gap: 48px;
+		}
+	}
+
+	&__review {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 30px;
+		width: 360px;
+	}
+
+	&__message {
+		font-style: italic;
+		font-size: 20px;
+		text-align: center;
+		color: #222224;
+
+		@media (width <=768px) {
+			font-size: 18px;
+		}
+	}
+
+	&__form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 1.67;
+		text-align: center;
+		color: #222224;
+	}
+
+	&__description {
+		font-size: 18px;
+		line-height: 1.67;
+		text-align: center;
+		color: #222224;
+		margin-bottom: 32px;
+
+		@media (width <=768px) {
+			font-size: 14px;
+		}
+	}
+}
+
+.form {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	font-size: 14px;
+
+	&__input {
+		outline: none;
+		border: none;
+		width: 256px;
+		height: 49px;
+		border-top-left-radius: 24px;
+		border-bottom-left-radius: 24px;
+		background-color: #E1E1E1;
+		padding: 7px 22px;
+
+		&--error {
+			box-shadow: inset 0 0 10px 0 rgba(255, 0, 0, 0.5);
+		}
+
+		@media (width <=768px) {
+			width: 245px;
+		}
+	}
+
+	&__button {
+		padding: 0;
+		background-color: transparent;
+		border: none;
+		width: 100px;
+		height: 49px;
+		border-top-right-radius: 24px;
+		border-bottom-right-radius: 24px;
+		background-color: #F16D7F;
+		padding: 7px 22px;
+		color: #ffffff;
+		font-weight: 400;
+		text-align: center;
+		cursor: pointer;
+
+		@media (width <=768px) {
+			width: 90px;
+			padding-left: 18px;
+		}
+	}
+}
+
+.text {
+	font-size: 32px;
+
+	&--big {
+		font-size: 48px;
+		font-weight: 900;
+
+		@media (width <=768px) {
+			font-size: 44px;
+		}
+	}
+
+	&--pink {
+		color: #F16D7F;
+	}
+
+	&--lg {
+		font-size: 32px;
+
+		@media (width <=768px) {
+			font-size: 24px;
+		}
+	}
+
+	&--bold {
+		font-weight: 700;
+	}
+}

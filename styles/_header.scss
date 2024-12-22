@@ -1,0 +1,59 @@
+.header {
+	position: relative;
+	z-index: 2;
+	background-color: #000000;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 75px;
+	}
+
+	&__menu {
+
+		&-list {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 33px;
+
+			@media (width < 480px) {
+				&> :nth-last-child(-n+2) {
+					display: none;
+				}
+			}
+
+			&--gap40 {
+				gap: 40px;
+			}
+		}
+
+		&-item {
+			position: relative;
+
+			&--modal {
+				cursor: pointer;
+			}
+
+			&--cart {
+				&::after {
+					content: attr(data-counter);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: absolute;
+					color: #ffffff;
+					font-size: 12px;
+					right: -10px;
+					top: -10px;
+					width: 19px;
+					height: 19px;
+					border-radius: 100%;
+					background-color: #f16d7f;
+				}
+			}
+		}
+	}
+}
